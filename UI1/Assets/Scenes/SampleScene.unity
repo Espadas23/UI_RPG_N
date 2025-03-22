@@ -1192,8 +1192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minDamage: 1
-  maxDamage: 4
-  poisonDamage: 2
+  maxDamage: 3
+  poisonDamage: 4
 --- !u!4 &1289860226
 Transform:
   m_ObjectHideFlags: 0
