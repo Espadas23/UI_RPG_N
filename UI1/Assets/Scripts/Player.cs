@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Characters
+public class Player : Character
 {
     [SerializeField] private string charName;
 

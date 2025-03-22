@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Characters
+public class Enemy : Character
 {
-    public int agression = 10;
+    [SerializeField] private int aggresion = 10;
 }
