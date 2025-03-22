@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Enemy : Character
 {
-    [SerializeField] private int aggresion = 10;
+    [SerializeField] protected int aggresion = 10;
 }

@@ -14,8 +14,9 @@ public class GameManager : MonoBehaviour
     }
     public void DoRound()
     {
-        int playerDamage = player.Attack();
-        enemy.TakeDamage(playerDamage);
+        //int playerDamage = player.Attack();
+        //enemy.TakeDamage(playerDamage);
+        enemy.TakeDamage(player.ActiveWeapon);
         int enemyDamage = enemy.Attack();
         player.TakeDamage(enemyDamage);
         RefreshUI();
