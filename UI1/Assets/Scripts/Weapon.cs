@@ -6,7 +6,7 @@ public abstract class Weapon : MonoBehaviour
 
     public int GetDamage()
     {
-        return Random.Range(minDamage, maxDamage);
+        return Random.Range(minDamage, maxDamage+1);
     }
 
     public abstract void ApplyEffect(Character character);

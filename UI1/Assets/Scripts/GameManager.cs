@@ -1,25 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public Player player;
     public Enemy enemy;
-    public Character character;
-    // Start is called before the first frame update
+    [SerializeField] private TMP_Text playerName, playerHealth, enemyName, enemyHealth;
     void Start()
+    {
+        RefreshUI();
+    }
+    public void DoRound()
     {
         int playerDamage = player.Attack();
         enemy.TakeDamage(playerDamage);
-        //Debug.Log("player name: " + player.CharName);
         int enemyDamage = enemy.Attack();
         player.TakeDamage(enemyDamage);
+        RefreshUI();
+    }
+    private void RefreshUI()
+    {
+        playerName.text = player.CharName;
+        enemyName.text = enemy.name;
+        playerHealth.text ="health: "+ player.health.ToString();
+        enemyHealth.text = "health: "+enemy.health.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
