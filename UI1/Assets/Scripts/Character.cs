@@ -6,10 +6,21 @@ public class Character : MonoBehaviour
 {
     public int health;
     [SerializeField] private Weapon activeWeapon;
-
     public Weapon ActiveWeapon
     {
         get { return activeWeapon; }
+        set 
+        { 
+            if (value != null)
+            {
+                activeWeapon = value;
+                Debug.Log("New weapon equiped: " + activeWeapon.name);
+            }
+            else
+            {
+                Debug.LogWarning("Weapon slot is empty");
+            }
+        }
     }
 
     public virtual int Attack()
@@ -20,16 +31,16 @@ public class Character : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        Debug.Log(name+ "health before hit: "+ health);
+        Debug.Log(name+ " health before hit: "+ health);
         health -= damage;
-        Debug.Log(name+ "health after hit: "+ health);
+        Debug.Log(name+ " health after hit: "+ health);
     }
 
     public void TakeDamage(Weapon weapon)
     {
-        Debug.Log(name+ "health before hit: "+ health);
+        Debug.Log(name+ " health before hit: "+ health);
         health -= weapon.GetDamage();
         weapon.ApplyEffect(this);
-        Debug.Log(name+ "health after hit: "+ health);
+        Debug.Log(name+ " health after hit: "+ health);
     }
 }

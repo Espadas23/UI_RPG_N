@@ -778,8 +778,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bba3641816a3df479b1d1131dcde802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDamage: 2
-  maxDamage: 4
+  minDamage: 1
+  maxDamage: 2
 --- !u!4 &831339424
 Transform:
   m_ObjectHideFlags: 0
@@ -1160,6 +1160,8 @@ Transform:
   m_Children:
   - {fileID: 831339424}
   - {fileID: 1289860226}
+  - {fileID: 1865263091}
+  - {fileID: 2088422780}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1289860224
@@ -1191,7 +1193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430678ccc53aca044b5df7b9814b0fe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDamage: 1
+  minDamage: 2
   maxDamage: 3
   poisonDamage: 4
 --- !u!4 &1289860226
@@ -1244,6 +1246,10 @@ MonoBehaviour:
   playerHealth: {fileID: 384711602}
   enemyName: {fileID: 1927522423}
   enemyHealth: {fileID: 1795697548}
+  availableWeapons:
+  - {fileID: 2088422781}
+  - {fileID: 1289860225}
+  - {fileID: 1865263090}
 --- !u!4 &1341642892
 Transform:
   m_ObjectHideFlags: 0
@@ -1370,7 +1376,7 @@ MonoBehaviour:
   health: 40
   activeWeapon: {fileID: 475439915}
   aggresion: 0
-  aggresionGain: 10
+  aggresionGain: 11
 --- !u!4 &1699471687
 Transform:
   m_ObjectHideFlags: 0
@@ -1523,6 +1529,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795697546}
   m_CullTransparentMesh: 1
+--- !u!1 &1865263089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1865263091}
+  - component: {fileID: 1865263090}
+  m_Layer: 0
+  m_Name: IcyWeapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1865263090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865263089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77f738a207b774c42897878bf2e3a704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDamage: 3
+  maxDamage: 4
+  icyDamage: 5
+--- !u!4 &1865263091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865263089}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 628.9251, y: 124.813614, z: 9.661294}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1105325566}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1927522421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,6 +1759,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2088422779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2088422780}
+  - component: {fileID: 2088422781}
+  m_Layer: 0
+  m_Name: FireWeapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2088422780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088422779}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 628.9251, y: 124.813614, z: 9.661294}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1105325566}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2088422781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088422779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453680e2327c8a34089d00e6fb658ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDamage: 4
+  maxDamage: 5
+  fireDamage: 6
 --- !u!1 &2100806249
 GameObject:
   m_ObjectHideFlags: 0
